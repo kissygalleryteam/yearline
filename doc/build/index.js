@@ -1,7 +1,7 @@
 /*
 combined files : 
 
-2.0.0/index
+kg/yearline/2.1.1/index
 
 */
 /**
@@ -9,7 +9,7 @@ combined files :
  * @author Letao<mailzwj@126.com>
  * @module timeline
  **/
-KISSY.add('2.0.0/index',function (S, Node, Base) {
+KISSY.add('kg/yearline/2.1.1/index',function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
     /**
@@ -55,7 +55,7 @@ KISSY.add('2.0.0/index',function (S, Node, Base) {
             } else if (self.cfg.scale > 5) {
                 self.cfg.scale = 5;
             }
-            self.set("space", 2.0.0 * self.cfg.scale);
+            self.set("space", 100 * self.cfg.scale);
             self.set("rows", [12, 59, 106]);
             // style.overflow = "hidden";
             style.cursor = "move";
@@ -120,7 +120,7 @@ KISSY.add('2.0.0/index',function (S, Node, Base) {
             });
             // console.log(lists);
             S.each(lists, function(n, i){
-                // n.css({"left": Math.round(Math.random() * 2.0.00), "top": 0});
+                // n.css({"left": Math.round(Math.random() * 1800), "top": 0});
                 self._writeStyle(n);
             });
         },
@@ -174,7 +174,7 @@ KISSY.add('2.0.0/index',function (S, Node, Base) {
                     if (self.cfg.scale > 5) {
                         self.cfg.scale = 5;
                     }
-                    self.set("space", self.cfg.scale * 2.0.0);
+                    self.set("space", self.cfg.scale * 100);
                     self.get("eventBox").one(".TL-TimeLine").remove();
                     self._createTimeLine();
                     self._resizeListBox();
@@ -189,7 +189,7 @@ KISSY.add('2.0.0/index',function (S, Node, Base) {
                     if (self.cfg.scale < 0.5) {
                         self.cfg.scale = 0.5;
                     }
-                    self.set("space", self.cfg.scale * 2.0.0);
+                    self.set("space", self.cfg.scale * 100);
                     self.get("eventBox").one(".TL-TimeLine").remove();
                     self._createTimeLine();
                     self._resizeListBox();
@@ -240,7 +240,7 @@ KISSY.add('2.0.0/index',function (S, Node, Base) {
                 month = parseInt(month) + 1;
             }
             var nextMonth = new Date(year, month, 1);
-            var wholeMonth = parseInt((nextMonth - thisMonth) / (24 * 60 * 60 * 2.0.00));
+            var wholeMonth = parseInt((nextMonth - thisMonth) / (24 * 60 * 60 * 1000));
             datePercent = day / wholeMonth;
             left = date.getMonth() * space + space * datePercent;
             return left;

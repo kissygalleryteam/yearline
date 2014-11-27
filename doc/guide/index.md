@@ -1,8 +1,6 @@
 ## yearline
 
-* 版本：2.0.0
-* 教程：[http://kg.kissyui.com/yearline/2.0.0/guide/index.html](http://kg.kissyui.com/yearline/2.0.0/guide/index.html)
-* demo：[http://kg.kissyui.com/yearline/2.0.0/demo/index.html](http://kg.kissyui.com/yearline/2.0.0/demo/index.html)
+时间线组件
 
 ## 组件说明
 
@@ -17,7 +15,7 @@
 
 * @param ctn{id|class|node}：组件渲染显示的节点
 * @param cfg{object}：组件配置选项
-	- @property scale{int|float} 组件横向放大倍数，取值范围[0.5, 5]，基数：每月2.0.0px
+	- @property scale{int|float} 组件横向放大倍数，取值范围[0.5, 5]，基数：每月2.1.1px
 	- @property enlarge{id|class|node} 组件放大控制器
 	- @property narrow{id|class|node} 组件缩小控制器
 	- @property month{int} 初始化第month月居中，取值[1, 12]
@@ -97,9 +95,9 @@ CSS样式：
 .tl-main {
     position: fixed;
     bottom: 0;
-    width: 2.0.0%;
+    width: 2.1.1%;
     height: 200px;
-    z-index: 2.0.000;
+    z-index: 2.1.100;
 }
 .tl-btn {
     margin: 0 0 0 30px;
@@ -115,7 +113,7 @@ JS脚本：
 
 ```
 var S = KISSY;
-S.use('kg/yearline/2.0.0/index,kg/yearline/2.0.0/index.css', function (S, Timeline) {
+S.use('kg/yearline/2.1.1/index,kg/yearline/2.1.1/index.css', function (S, Timeline) {
     var tl = new Timeline("#TL-Main", {
         scale: 1.5,
         enlarge: "#TL-Enlarge",
@@ -130,6 +128,10 @@ S.use('kg/yearline/2.0.0/index,kg/yearline/2.0.0/index.css', function (S, Timeli
 ```
 
 ## changelog
+
+### 2014/11/28
+
+* 剑平迁移
 
 ### 2013/10/13
 
